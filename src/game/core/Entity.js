@@ -11,4 +11,10 @@ export default class Entity extends Vector {
     this.maxSpeed = options.maxSpeed || 0
     this.animationState = new AnimationState()
   }
+
+  addAnimation(options = {}) {
+    this.animationState.addAnimation({
+      ...options
+    })
+  }
 }
